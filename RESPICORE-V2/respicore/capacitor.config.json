@@ -1,0 +1,9 @@
+{
+  "appId": "com.respicore.app",
+  "appName": "RespiCore",
+  "webDir": "www",
+  "server": {
+    "url": "https://respicore-v20.vercel.app",
+    "cleartext": true
+  }
+}
