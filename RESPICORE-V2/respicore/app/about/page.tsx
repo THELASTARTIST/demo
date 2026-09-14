@@ -3,6 +3,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import BusinessPage from "../../components/business";
 
 type Lang = "en" | "hi" | "bn";
 
@@ -300,8 +301,10 @@ export default function AboutPage() {
         .lang-btn{font-family:var(--mono);font-size:10px;letter-spacing:0.08em;padding:5px 10px;border-radius:6px;border:none;background:transparent;color:var(--text3);cursor:pointer;transition:all 0.2s;font-weight:500;}
         .lang-btn.active{background:var(--accent);color:#050d14;}
         .lang-btn:hover:not(.active){color:var(--text);background:var(--border);}
-        .btn-back{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--text2);text-decoration:none;border:1px solid var(--border2);padding:8px 18px;border-radius:var(--r);transition:all 0.2s;display:flex;align-items:center;gap:6px;}
-        .btn-back:hover{border-color:var(--accent);color:var(--accent);}
+        .btn-back{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--text2);text-decoration:none;border:1px solid var(--border2);padding:8px 18px;border-radius:var(--r);transition:all 0.2s;display:flex;align-items:center;gap:6px;background:transparent;}
+        .btn-back:hover{border-color:var(--accent);color:var(--accent);background:rgba(0,200,255,0.05);}
+        .btn-business{font-family:var(--sans);font-size:13px;font-weight:700;color:#fff;text-decoration:none;border:none;padding:9px 22px;border-radius:100px;transition:all 0.25s;display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#00c8ff,#a855f7 90%);box-shadow:0 0 20px rgba(0,200,255,0.35),0 4px 15px rgba(168,85,247,0.25);letter-spacing:0.02em;}
+        .btn-business:hover{transform:translateY(-2px);box-shadow:0 0 30px rgba(0,200,255,0.55),0 6px 20px rgba(168,85,247,0.35);color:#fff;opacity:0.95;}
 
         /* ── HERO ── */
         #story-hero{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 40px 80px;text-align:center;overflow:hidden;}
@@ -500,6 +503,9 @@ export default function AboutPage() {
               <path d="M19 12H5M12 19l-7-7 7-7"/>
             </svg>
             <span>{t.backBtn}</span>
+          </Link>
+          <Link href="/business" className="btn-business">
+            <span>Business Model &amp; Ecosystem</span>
           </Link>
         </div>
       </nav>

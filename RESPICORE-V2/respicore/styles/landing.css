@@ -1283,3 +1283,5 @@
   .landing-page .login-modal { padding: 36px 24px; border-radius: 20px; }
   .landing-page .result-meta { flex-wrap: wrap; gap: 8px; }
 }
+@keyframes shimmerText{0%,100%{text-shadow:0 0 15px rgba(0,200,255,.35),0 0 30px rgba(0,200,255,.15)}50%{text-shadow:0 0 25px rgba(0,200,255,.55),0 0 60px rgba(0,200,255,.3)}}
+.landing-page .hero-title em{text-shadow:0 0 20px rgba(0,200,255,.4),0 0 50px rgba(0,200,255,.2);animation:shimmerText 3s infinite alternate}
